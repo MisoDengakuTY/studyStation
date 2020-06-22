@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{jsarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{url}
+%
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{40\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.2in}
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+%
+\newcommand{\divergence}{\mathrm{div}\,}  %ダイバージェンス
+\newcommand{\grad}{\mathrm{grad}\,}  %グラディエント
+\newcommand{\rot}{\mathrm{rot}\,}  %ローテーション
+%
+\title{React入門}
+\author{米藤智哉}
+\date{\today}
+\begin{document}
+\maketitle
+%
+%
+\section{時代とともに難化するWeb開発}
+1990年代，HTTPを通信手段としてサーバとブラウザが登場し，それまで開発されていたHTMLはその構文をより厳格にしてきた．
+1996年にW3Cと呼ばれる非営利団体により，仕様が標準化され，同年，スタイルを記述するCSSが勧告された．
+その後，何度かの精査を重ね，1997年にHTML 4.0が勧告され，2014年にHTML 5が勧告された．\\
+さて，時代とともにWebページはそのコンテンツ（内容）を増やしていき，
+ただ同じ内容だけを表示する静的ページからユーザの書き込みやアカウント認証によってコンテンツの変わる会員サイトなどの動的ページへと需要が移った．
+当然ではあるが，複雑なWebページは開発のコストを増加させる．そのため，開発コストを低減させる多数のWebフレームワークが登場した．
+本書では，Reactを主題として扱うが，その前にいくつかのWebフレームワークを紹介したい．
+
+\section{Webフレームワークの紹介}
+この章では，いくつかのWebフレームワークの紹介をする．文章内でいくつか分からない単語が出るかもしれないが，
+後にまとめて説明を記述する方式を採る．そのため，立ち止まらずに読み進めてほしい．
+
+\subsection{Play framework, Spring framework}
+Play framework及びSpring frameworkはJavaのWebフレームワークである(前者は後にコアプログラムをScalaに置き換えている)．
+また，MVCアーキテクチャを備えており，2000年初期を代表するWebフレームワークとして生まれ，現在でも更新がなされている．
+本来であれば，この2つを同じ項目で並べるべきではないが，分けるとそれだけ差分項目を記述する必要があるため，面倒なので諦める．
+
+\subsection{Ruby on Rails}
+\subsection{Angular}
+\subsection{Vue.js}
+\subsection{ASP.NET Core Blazor}
+
+\subsection{MVCアーキテクチャ}
+MVCとは，1979年にXerox Palo Alto Research CenterのTrygve Reenskaug
+によって導入された設計手法である．\\
+MVCは以下3つの要素に分離する手法によりデータロジックと
+ビジネスロジックを分離することを目的としており，それぞれの頭文字を取った名づけられている．
+\subsubsection{Model}
+データとデータ参照・更新を管理するためのルール
+\subsubsection{View}
+モデルによって操作されたコンテンツを必要に応じて表示するためのルール
+\subsubsection{Controller}
+Viewに対するユーザー操作によってモデルが実行するべきアクションをまとめたルール
+
+\subsection{REST}
+
+\end{document}

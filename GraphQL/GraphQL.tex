@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{jsarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{url}
+%
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{40\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.2in}
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+%
+\newcommand{\divergence}{\mathrm{div}\,}  %ダイバージェンス
+\newcommand{\grad}{\mathrm{grad}\,}  %グラディエント
+\newcommand{\rot}{\mathrm{rot}\,}  %ローテーション
+%
+\title{GraqphQLのすゝめ}
+\author{米藤智哉}
+\date{\today}
+\begin{document}
+\maketitle
+%
+%
+\section{Web API設計}
+Web API(Web Application Programming Interface)とは，
+どのようにWebサービス上で外部のプログラムを呼び出して利用するかの仕組みである．
+現代では，Amazonや楽天での買い物やTwitterでのつぶやきなどネットワーク上で様々なデータのやり取りが行われている．
+では，こういったサービスを利用する上で自分の買い物履歴はどのように表示されていて、
+他人のつぶやきをどのように表示されているのでしょうか．
+そういったデータの表示のために様々な端末感でデータ(リソース)のやり取りを行うためにWeb APIが存在します．
+それでは，これからWeb APIを設計するために登場した代表的な技術を古い順に紹介していこう．
+
+\subsection{RPC}
+RPC(Remote procedure call，遠隔手続き呼び出し)とは，
+ネットワークを通じて他の端末上のプログラム(Oracleだとストアド・サブプログラム)を実行させる手法である。
+クライアントとサーバー間にはOSやハードウェアなどの差異は問題とならず，
+クライアント・サーバーシステムでは，
+クライアントからサーバーに対してリクエストを送り，
+サーバーからクライアントに対してレスポンスを返す．
+
+\subsection{SOAP}
+SOAP(Simple Object Access Protocol 諸説あり)とは，HTTPプロトコルを用い，
+XMLベースのWSDL(Web Services Description Language)
+にエンコードされたメッセージを伝送するプロトコルである．
+SOAPメッセージは，構造化された情報をまとめたエンベローブと呼ばれるタグ内に，
+ヘッダやボディなどの制御情報を付加し，異なる端末間で送受信することを可能とする．
+
+\subsection{REST}
+REST(Representational State Transfer)とは，
+Webを使ったクライアント・サーバーシステムの設計思想である．
+上記2つと異なり，RESTは厳密な手法ではなく，
+こうすると良いという思想やスタイルに近いものだと考えてほしい．\\
+RESTはリソースを扱うための思想である．
+RESTでは，以下4つのHTTPメソッド(アクション)は状態を遷移させる操作であり，
+どのようなリソースを保持しているかまたは保持していないかを状態として表している．
+\begin{itemize}
+    \item GET リソースの取得
+    \item PUT リソースの更新
+    \item POST リソースの新規作成
+    \item DELETE リソースの削除
+\end{itemize}
+
+\section{複雑化するWeb開発に立ち向かう}
+前章で述べた技術はWeb API設計技術において大きな功績を作り上げた．
+しかし，それらの技術の登場には以前の技術に対しての不満があったからに他ならない．
+時代が進むにつれて，Webサービスはそのコンテンツを大きく増やし，複雑化させた．
+それによって，既存の手法では面倒なことが増えてしまった．
+SOAPで作られたサービスはRESTに置き換わっていき，
+XMLは書きにくいとJSONに置き換わった．\\
+結局のところ，面倒なことは改善しようという考えが技術を発展させてきたのだ．
+
+\section{GraphQLの登場}
+GraphQLは2015年にFacebookによって仕様を公開された．
+FacebookはRESTfulサーバーによって運用されていたが，
+モバイル版Facebookを作成する際に十分な性能と安全性を出せずにいた．
+そのため，Facebookエンジニアたちは現行のRESTfulサーバーの問題点を挙げた．
+\subsection{RESTの問題点}
+内容はまだ
+
+
+\section{GraphQLの仕様}
+内容はまだ
+\subsection{クエリとスキーマ}
+
+\section{React + Apollo Cliente GraphQL}
+React開発の話は別ドキュメント
+内容はまだ
+
+\subsection{GraphQL code generater}
+内容はまだ
+
+
+\end{document}
